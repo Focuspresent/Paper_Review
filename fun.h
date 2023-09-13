@@ -4,6 +4,8 @@
 using namespace std;
 
 void put_error(string str);
-bool check_path(string path);
+bool check_path(string& path);
 void test();
-string read_file(string path);
+vector<string> spilt(string& text);
+string count(string& text1, string& text2);
+string read_file(string& path);

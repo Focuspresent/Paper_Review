@@ -16,5 +16,6 @@ int main(int argc,char* argv[]){
     if(!paper.size()||!copied_paper.size()){
         put_error("File Size Empty");
     }
+    cout<<count(paper,copied_paper)<<endl;
     system("pause");
 }
