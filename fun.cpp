@@ -13,6 +13,19 @@ bool check_path(string path){
     return regex_match(path,regex("[a-z|A-Z]:([\\\\|/]\\w+)*[\\\\|/]\\w*(.\\w*|)"));
 }
 
+//读取文件到字符串
+string read_file(string path){
+    ifstream fin;
+    fin.open(path,ios::in);
+    if(!fin.is_open()){
+        put_error("File Open Error");
+    }
+    string s;
+    while(getline(fin,s));
+    //cout<<s<<endl;
+    return s;
+}
+
 //jieba库测试
 void test(){
     cppjieba::Jieba jieba("./cppjieba/dict/jieba.dict.utf8",

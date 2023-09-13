@@ -11,6 +11,10 @@ int main(int argc,char* argv[]){
     if(!check_path(orig_path)||!check_path(origadd_path)||!check_path(target_path)){
         put_error("File Path Error");
     }
-    test();
+    string paper=read_file(orig_path),copied_paper=read_file(origadd_path);
+    //其中一个内容为空
+    if(!paper.size()||!copied_paper.size()){
+        put_error("File Size Empty");
+    }
     system("pause");
 }
