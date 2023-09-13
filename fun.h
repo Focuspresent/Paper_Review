@@ -9,3 +9,4 @@ void test();
 vector<string> spilt(string& text);
 string count(string& text1, string& text2);
 string read_file(string& path);
+void write_file(string& path,string text);

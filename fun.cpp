@@ -22,9 +22,22 @@ string read_file(string& path){
     }
     string s;
     while(getline(fin,s));
+    fin.close();
     //cout<<s<<endl;
     return s;
 }
+
+//写文件
+void write_file(string& path,string text){
+    ofstream fout;
+    fout.open(path,ios::app);
+    if(!fout.is_open()){
+        put_error("File Open Error");
+    }
+    fout<<text<<endl;
+    fout.close();
+    return ;
+};
 
 //将字符串分词,并去掉标点符号
 vector<string> spilt(string& text){
