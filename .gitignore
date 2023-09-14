@@ -3,3 +3,4 @@ Makefile
 cppjieba/
 *.out
 *.txt
+*.exe
