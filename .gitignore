@@ -1,3 +1,5 @@
 Makefile
 .vscode/
 cppjieba/
+*.out
+*.txt
