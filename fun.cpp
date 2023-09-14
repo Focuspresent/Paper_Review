@@ -75,6 +75,9 @@ string count(string& text1,string& text2){
     };
     //转化
     auto ltov=[&](vector<string>& l,vector<int>& v){
+        if(!index) {
+            put_error("File Size Empty");
+        }
         v.resize(index);
         for(auto& n: l){
             if(!us.count(n)) continue;
@@ -88,6 +91,9 @@ string count(string& text1,string& text2){
             ans+=v1[i]*v2[i];
             m1+=v1[i]*v1[i];
             m2+=v2[i]*v2[i];
+        }
+        if(!m1||!m2){
+            put_error("Zero Denominator");
         }
         return ans/(sqrt(m1)*sqrt(m2));
     };
