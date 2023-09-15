@@ -41,11 +41,11 @@ void write_file(string& path,string text){
 
 //将字符串分词,并去掉标点符号
 vector<string> spilt(string& text){
-    cppjieba::Jieba jieba("./cppjieba/dict/jieba.dict.utf8",
-                          "./cppjieba/dict/hmm_model.utf8",
-                          "./cppjieba/dict/user.dict.utf8",
-                          "./cppjieba/dict/idf.utf8",
-                          "./cppjieba/dict/stop_words.utf8");
+    cppjieba::Jieba jieba("E:/CODE/Git/Paper/cppjieba/dict/jieba.dict.utf8",
+                          "E:/CODE/Git/Paper/cppjieba/dict/hmm_model.utf8",
+                          "E:/CODE/Git/Paper/cppjieba/dict/user.dict.utf8",
+                          "E:/CODE/Git/Paper/cppjieba/dict/idf.utf8",
+                          "E:/CODE/Git/Paper/cppjieba/dict/stop_words.utf8");
     vector<string> orign,words;
     jieba.Cut(text,orign,true);
     unordered_set<string> stop{",",".","!","，","。","！","!","！","、","“","”",":","："};
