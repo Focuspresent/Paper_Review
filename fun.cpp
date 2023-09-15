@@ -104,20 +104,3 @@ string count(string& text1,string& text2){
     sprintf(ans,"%3.2f",getSim(v1,v2));
     return string(ans);
 }
-
-//jieba库测试
-void test(){
-    cppjieba::Jieba jieba("./cppjieba/dict/jieba.dict.utf8",
-                          "./cppjieba/dict/hmm_model.utf8",
-                          "./cppjieba/dict/user.dict.utf8",
-                          "./cppjieba/dict/idf.utf8",
-                          "./cppjieba/dict/stop_words.utf8");
-    string text = "今天天气不错,我们一起出去玩吧!";
-    vector<string> words;
-    jieba.Cut(text,words,true);
-
-    for (auto& word : words) {
-        std::cout << word <<endl;
-    }
-    return ;
-}
