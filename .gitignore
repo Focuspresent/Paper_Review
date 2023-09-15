@@ -1,6 +1,8 @@
 Makefile
 .vscode/
-cppjieba/
 *.out
 *.txt
 *.exe
+test/
+cppjieba/build/
+cppjieba/test/
