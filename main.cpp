@@ -17,6 +17,6 @@ int main(int argc,char* argv[]){
         put_error("File Size Empty");
     }
     //cout<<count(paper,copied_paper)<<endl;
-    write_file(target_path,count(paper,copied_paper));
+    write_file(target_path,orig_path+" "+origadd_path+":"+count(paper,copied_paper));
     system("pause");
 }
