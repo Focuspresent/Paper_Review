@@ -20,11 +20,12 @@ string read_file(string& path){
     if(!fin.is_open()){
         put_error("File Open Error");
     }
+    string ans;
     string s;
-    while(getline(fin,s));
+    while(getline(fin,s)) ans+=s;
     fin.close();
-    //cout<<s<<endl;
-    return s;
+    //cout<<ans<<endl;
+    return ans;
 }
 
 //写文件
